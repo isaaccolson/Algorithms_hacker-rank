@@ -18,19 +18,19 @@ class Solution {
 
         var totalSwaps = 0;
 
-        for(var value = q.Length; value > 0; value--){
+        for (var value = q.Length; value > 0; value--) {
 
             var currentValueIndex = -1;
-            var originalValueIndex = value -1;
+            var originalValueIndex = value - 1;
 
-            for(var position = 0; position < 3; position++){
-                if(q[originalValueIndex - position] == value){
+            for (var position = 0; position < 3; position++) {
+                if (q[originalValueIndex - position] == value) {
                     currentValueIndex = originalValueIndex - position;
                     break;
                 }
             }
 
-            if(currentValueIndex == -1){
+            if (currentValueIndex == -1) {
                 Console.WriteLine("Too chaotic");
                 return;
             }
@@ -42,9 +42,9 @@ class Solution {
             //shifting array
             var valueToShift = value;
 
-            for(int j = 0; j < diff + 1; j++){
-                var valueToBeReplaced = q[originalValueIndex-j];
-                q[originalValueIndex-j] = valueToShift;
+            for (int j = 0; j < diff + 1; j++) {
+                var valueToBeReplaced = q[originalValueIndex - j];
+                q[originalValueIndex - j] = valueToShift;
                 valueToShift = valueToBeReplaced;
             }
 
@@ -61,7 +61,7 @@ class Solution {
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] q = Array.ConvertAll(Console.ReadLine().Split(' '), qTemp => Convert.ToInt32(qTemp))
-            ;
+                ;
             minimumBribes(q);
         }
     }
