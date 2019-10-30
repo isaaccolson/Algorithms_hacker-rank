@@ -3,6 +3,7 @@ public class Solution {
         var newAddress = "";
         foreach(char letter in address){
             newAddress += (letter == '.') ? "[.]" : letter.ToString();
+            //address.Replace(".","[.]"); Tom's way
         }
         return newAddress;
     }
