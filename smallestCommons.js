@@ -1,13 +1,13 @@
 function smallestCommons(arr) {
 
-var returnNum = -1;
+  var returnNum = -1;
 
   arr.sort((a,b) => (a-b));
   var high = arr[1];
   var low = arr[0];
 
-var counter = 2;
-var flag = true;
+  var counter = 2;
+  var flag = true;
 
   while(flag){
 
