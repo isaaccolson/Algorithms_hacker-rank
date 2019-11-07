@@ -11,6 +11,7 @@ public class Solution {
 
     int returnString;
     bool res = int.TryParse(new string(chars), out returnString);
+    //Could have used a try catch block: try{var num = int.Parse(str);} catch(Exception){Console.WriteLine("error!")}
     return returnString;
   }
 }
